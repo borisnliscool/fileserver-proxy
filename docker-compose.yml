@@ -1,0 +1,11 @@
+version: '3'
+services:
+  fxproxy:
+    build: .
+    container_name: fxproxy
+    environment:
+      - REMOTE=http://<your ip>:30120
+    ports:
+      - "80:80"
+    volumes:
+      - ./cache:/srv/cache
