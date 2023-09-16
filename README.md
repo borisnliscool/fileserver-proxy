@@ -1,4 +1,4 @@
-# fxproxy
+# fileserver-proxy
 
 Disclaimer: I don't want to take any credit for making this, as it is just an implementation of [this cookbook article](https://cookbook.fivem.net/2019/10/29/optimizing-resource-downloads-using-a-caching-proxy/).
 
