@@ -12,13 +12,12 @@ If you've changed the port, also change that. <br/>
 
 Make sure you add this to your server config:
 
-```
+```conf
 fileserver_add ".*" "https://<your domain>/files"
 adhesive_cdnKey "<random characters>"
 ```
 
-### Starting
-
-```
+#### Starting the proxy
+```conf
 docker-compose up -d
 ```
