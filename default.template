@@ -13,4 +13,8 @@ server {
         proxy_cache_valid 1y;
         proxy_cache_key $request_uri$is_args$args;
     }
+
+    location / {
+        return 301 https://github.com/borisnliscool/fileserver-proxy;
+    }
 }

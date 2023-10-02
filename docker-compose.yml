@@ -1,8 +1,10 @@
 version: '3'
+name: fileserver-proxy
+
 services:
-  fxproxy:
+  proxy:
     build: .
-    container_name: fxproxy
+    container_name: proxy
     environment:
       - REMOTE=http://<your ip>:30120
     ports:
