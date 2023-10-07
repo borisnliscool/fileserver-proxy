@@ -5,11 +5,6 @@ Disclaimer: I don't want to take any credit for making this, as it is just an im
 Make sure you change `<your IP>` in the `docker-compose.yml` file to your server's IP. <br/>
 If you've changed the port, also change that. <br/>
 
-### Notes
-
-- Every time you change anything in a resource, you need to delete the `/cache` folder.
-- When using this behind a Cloudflare proxy, make sure that there aren't any files that are larger than 50MB, as this might cause issues.
-
 Make sure you add this to your server config:
 
 ```conf
@@ -18,6 +13,13 @@ adhesive_cdnKey "<random characters>"
 ```
 
 #### Starting the proxy
+
 ```conf
 docker-compose up -d
 ```
+
+### Notes
+
+Every time you change anything in a resource, you need to delete the `/cache` folder.
+You could use [ssh-action](https://github.com/appleboy/ssh-action) to clear the cache on your server (if you do this I recommend creating a new user with the fileserver-proxy as their home directory).
+If you're using Cloudflare you might also want to use [cloudflare-purge-action](https://github.com/jakejarvis/cloudflare-purge-action)
